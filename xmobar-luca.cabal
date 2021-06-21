@@ -1,0 +1,42 @@
+cabal-version:      2.4
+name:               xmobar-luca
+version:            0.1.0.0
+synopsis:
+
+-- A longer description of the package.
+-- description:
+homepage:
+
+-- A URL where users can report bugs.
+-- bug-reports:
+license:            NONE
+author:             Luca Leon Happel
+maintainer:
+
+-- A copyright notice.
+-- copyright:
+category:           System
+extra-source-files: CHANGELOG.md
+
+library
+    exposed-modules:  Plugins
+    build-depends:    base ^>=4.14.1.0,
+                      xmobar ^>= 0.38,
+                      process ^>= 1.6.11.0
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable xmobar-luca
+    main-is:          Main.hs
+
+    -- Modules included in this executable, other than Main.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    ghc-options: -threaded
+    build-depends:    base ^>=4.14.1.0,
+                      xmobar ^>= 0.38,
+                      xmobar-luca
+    hs-source-dirs:   app
+    default-language: Haskell2010

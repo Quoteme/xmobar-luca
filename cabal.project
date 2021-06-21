@@ -1,0 +1,4 @@
+packages: ./xmobar-luca.cabal
+
+constraints:
+	xmobar +with_threaded +with_xft +with_xpm

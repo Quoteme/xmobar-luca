@@ -39,7 +39,7 @@ instance Exec Speech where
 data WindowMenu = WindowMenu
   deriving (Read, Show)
 instance Exec WindowMenu where
-  run WindowMenu = return (action "sleep 0.7 && ~/.cabal/bin/xmonadctl \"menu\"" (icon "menu.xpm"))
+  run WindowMenu = return (action "sleep 0.7 && xmonadctl \"menu\"" (icon "menu.xpm"))
 
 -- PLUGIN Utility functions
 slider :: Int -> Int -> Int -> (Int -> String) -> String -> String -> String

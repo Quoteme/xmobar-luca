@@ -6,8 +6,8 @@ import Plugins
 -- CONFIG
 config :: Config
 config = defaultConfig {
-  font = "xft:scientifica:size=9:antialias=false"
-  , additionalFonts = ["xft:siji:size=9:antialias=false"]
+  font = "xft:scientifica:size=8:antialias=false"
+  , additionalFonts = ["xft:siji:size=8:antialias=false"]
   , borderColor = "black"
   , border = BottomB
   , bgColor = "black"

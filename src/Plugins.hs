@@ -3,11 +3,11 @@ module Plugins where
 import Xmobar
 import System.Process (readProcess)
 
-data Volume = Volume
+data VolumeBar = VolumeBar
   deriving (Read, Show)
-instance Exec Volume where
-  rate Volume = 5
-  run Volume = do
+instance Exec VolumeBar where
+  rate VolumeBar = 5
+  run VolumeBar = do
     vol <- readProcess "pamixer" ["--get-volume"] []
     return (slider (parse vol) 100 10 setVolume "#" "·")
     where
@@ -15,16 +15,16 @@ instance Exec Volume where
       setVolume v = "pamixer --set-volume "++show (10*v)
       -- setVolume v = callProcess "pamixer" ["--set-volume",show v]
 
-data Light = Light
+data LightBar = LightBar
   deriving (Read, Show)
-instance Exec Light where
-  rate Light = 5
-  run Light = do
+instance Exec LightBar where
+  rate LightBar = 5
+  run LightBar = do
     light <- readProcess "light" [] []
-    return (slider (parse light) 100 10 setLight "#" "·")
+    return (slider (parse light) 100 10 setLightBar "#" "·")
       where
         parse v = round (read v :: Float)
-        setLight v = "sudo light -S "++show (10*v)
+        setLightBar v = "sudo light -S "++show (10*v)
 
 data Screenshot = Screenshot
   deriving (Read, Show)

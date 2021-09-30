@@ -69,15 +69,15 @@ config = defaultConfig {
     , Run $ Date           "<fc=#ABABAB>%d/%m/%y %H:%M</fc>" "date" 10
     , Run StdinReader
     , Run UnsafeStdinReader
-    , Run Volume
-    , Run Light
+    , Run VolumeBar
+    , Run LightBar
     , Run Speech
     , Run Screenshot
     , Run WindowMenu
     ]
   , sepChar = "%"
   , alignSep = "}{"
-  , template = "%UnsafeStdinReader%}{%battery% | %dynnetwork% | %multicpu% | %coretemp% | %memory% | %date% | %Light% %Volume% | %Speech% %Screenshot% | %WindowMenu%"
+  , template = "%UnsafeStdinReader%}{%battery% | %dynnetwork% | %multicpu% | %coretemp% | %memory% | %date% | %LightBar% %VolumeBar% | %Speech% %Screenshot% | %WindowMenu%"
   -- , template = "%UnsafeStdinReader%}{%Volume%"
 --
 }

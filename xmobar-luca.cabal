@@ -21,7 +21,7 @@ extra-source-files: CHANGELOG.md
 library
     exposed-modules:  Plugins
     build-depends:    base ^>=4.14.1.0,
-                      xmobar ^>= 0.38,
+                      xmobar ^>= 0.39,
                       process ^>= 1.6.11.0
     hs-source-dirs:   src
     default-language: Haskell2010
@@ -36,7 +36,7 @@ executable xmobar-luca
     -- other-extensions:
     ghc-options: -threaded
     build-depends:    base ^>=4.14.1.0,
-                      xmobar ^>= 0.38,
+                      xmobar ^>= 0.39,
                       xmobar-luca
     hs-source-dirs:   app
     default-language: Haskell2010

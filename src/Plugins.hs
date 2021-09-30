@@ -24,7 +24,7 @@ instance Exec LightBar where
     return (slider (parse light) 100 10 setLightBar "#" "·")
       where
         parse v = round (read v :: Float)
-        setLightBar v = "sudo light -S "++show (10*v)
+        setLightBar v = "light -S "++show (10*v)
 
 data Screenshot = Screenshot
   deriving (Read, Show)

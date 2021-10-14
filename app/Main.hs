@@ -62,7 +62,7 @@ config = defaultConfig {
       -- discharging status
       , "-o" , "<icon=batteryDrainHalf.xpm/><left>% (<timeleft>)"
       -- AC "on" status
-      , "-O" , "<icon=batteryCharging.xpm/><fc=#dAA520>Charging</fc>"
+      , "-O" , "<icon=batteryCharging.xpm/><left>% (<timeleft>)"
       -- charged status
       , "-i" , "<icon=batteryCharged.xpm/>"
       ] 50

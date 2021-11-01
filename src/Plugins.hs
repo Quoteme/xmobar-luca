@@ -34,7 +34,7 @@ instance Exec Screenshot where
 data Speech = Speech
   deriving (Read, Show)
 instance Exec Speech where
-  run Speech = return (action "~/.xmonad/xmobar-luca/res/speech/speech.py" (icon "microphone.xpm"))
+  run Speech = return (action "speechdetection" (icon "microphone.xpm"))
 
 data WindowMenu = WindowMenu
   deriving (Read, Show)
